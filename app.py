@@ -1,7 +1,7 @@
 # Use py -3 -m venv env to create env.
 # Use env\Scripts\activate.bat to activate env.
 
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import os.path
@@ -57,9 +57,15 @@ class Todo(db.Model):
 if not path.exists("template_schedules.db"):
     db.create_all()
 
-@app.route("/")
+@app.route("/", methods=["POST", "GET"])
 def index():
-    return render_template('index.html')
+    if request.method == "POST":
+        
+        sos = request.form.get("sunday_open_start")
+        
+    else:
+        tasks = Todo.query.order_by(Todo.date_created).all() # Returns all data in the database.
+        return render_template('index.html', tasks=tasks)
 
 if __name__ == "__main__":
     app.run(debug=True)

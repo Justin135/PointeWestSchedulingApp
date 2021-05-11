@@ -1,8 +1,65 @@
 {% extends "base.html" %}
 
 {% block head %}
-
+    
 {% endblock %}
 {% block body %}
-<h1>Schedule App</h1>
+    <h1>Schedule App</h1>
+    
+    <form action="/" method="POST">
+        
+        <table>
+            <tr>
+                <th>Days</th>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+            <tr>
+                <td>Opening Start</td>
+                <td><input type="text" name="sunday_close_end" id="sunday_close_end"></td>
+                <td><input type="text" name="monday_close_end" id="monday_close_end"></td>
+                <td><input type="text" name="tuesday_close_end" id="tuesday_close_end"></td>
+                <td><input type="text" name="wednesday_close_end" id="wednesday_close_end"></td>
+                <td><input type="text" name="thursday_close_end" id="thursday_close_end"></td>
+                <td><input type="text" name="friday_close_end" id="friday_close_end"></td>
+                <td><input type="text" name="saturday_close_end" id="saturday_close_end"></td>
+            </tr>
+            <tr>
+                <td>Opening End</td>
+                <td><input type="text" name="sunday_open_end" id="sunday_open_end"></td>
+                <td><input type="text" name="monday_open_end" id="monday_open_end"></td>
+                <td><input type="text" name="tuesday_open_end" id="tuesday_open_end"></td>
+                <td><input type="text" name="wednesday_open_end" id="wednesday_open_end"></td>
+                <td><input type="text" name="thursday_open_end" id="thursday_open_end"></td>
+                <td><input type="text" name="friday_open_end" id="friday_open_end"></td>
+                <td><input type="text" name="saturday_open_end" id="saturday_open_end"></td>
+            </tr>
+            <tr>
+                <td>Closing Start</td>
+                <td><input type="text" name="sunday_close_start" id="sunday_close_start"></td>
+                <td><input type="text" name="monday_close_start" id="monday_close_start"></td>
+                <td><input type="text" name="tuesday_close_start" id="tuesday_close_start"></td>
+                <td><input type="text" name="wednesday_close_start" id="wednesday_close_start"></td>
+                <td><input type="text" name="thursday_close_start" id="thursday_close_start"></td>
+                <td><input type="text" name="friday_close_start" id="friday_close_start"></td>
+                <td><input type="text" name="saturday_close_start" id="saturday_close_start"></td>
+            </tr>
+            <tr>
+                <td>Closing End</td>
+                <td><input type="text" name="sunday_close_end" id="sunday_close_end"></td>
+                <td><input type="text" name="monday_close_end" id="monday_close_end"></td>
+                <td><input type="text" name="tuesday_close_end" id="tuesday_close_end"></td>
+                <td><input type="text" name="wednesday_close_end" id="wednesday_close_end"></td>
+                <td><input type="text" name="thursday_close_end" id="thursday_close_end"></td>
+                <td><input type="text" name="friday_close_end" id="friday_close_end"></td>
+                <td><input type="text" name="saturday_close_end" id="saturday_close_end"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Add Template">
+    </form>
 {% endblock %}
